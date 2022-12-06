@@ -14,11 +14,17 @@ i {
     font-size: 20px;
 }
 
+.main {
+    max-width: 1170px;
+    margin: 0 135px;
+}
+
 /* cities works */
 
 .cities,
-.nature {
-    margin: 120px 135px;
+.nature,
+.people {
+    margin: 120px 0;
 }
 
 .title {
@@ -35,7 +41,11 @@ i {
     display: grid;
     margin-top: 80px;
     gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 370px);
+}
+
+.cities__gallery {
+    grid-template-rows: repeat(3, 370px);
 }
 
 .first__photo {
@@ -64,6 +74,10 @@ i {
 
 /* nature works */
 
+.nature__gallery {
+    grid-template-rows: repeat(4, 370px);
+}
+
 .first__nature {
     grid-column: 1/2;
 }
@@ -82,13 +96,62 @@ i {
     grid-row: 2/4;
 }
 
-/* .fifth__nature {
-    grid-column: 1/2;
+.fifth__nature {
+    grid-column: 1/3;
 }
 
 .sixth__nature {
+    grid-column: 3/4;
+}
+
+/* people gallery */
+
+.people__gallery {
+    grid-template-rows: repeat(5, 370px);
+}
+
+.first__person {
+    grid-column: 1/2;
+}
+
+.second__person {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.third__person {
+    grid-column: 3/4;
+}
+
+.fourth__person {
+    grid-column: 1/2;
+}
+
+.fifth__person {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.sixth__person {
+    grid-column: 1/2;
+    grid-row: 3/5;
+}
+
+.seventh__person {
+    grid-column: 2/3;
+}
+
+.eighth__person {
     grid-column: 2/4;
-} */
+}
+
+.ninth__person {
+    grid-column: 1/3;
+}
+
+.tenth__person {
+    grid-column: 3/4;
+}
 
 /* card photo style */
 
@@ -104,10 +167,9 @@ i {
     left: 0;
     bottom: 0;
     right: 0;
-    /* width: 100%; */
     cursor: pointer;
-    background-size: cover;
     background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+    background-size: cover;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
