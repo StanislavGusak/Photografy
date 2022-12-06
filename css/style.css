@@ -160,6 +160,21 @@ i {
     position: relative;
 }
 
+.card__photo:hover .blur {
+    cursor: pointer;
+    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+    border-radius: 20px;
+    transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    -moz-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+}
+
+.card__photo:hover .link__item {
+    opacity: 1;
+}
+
 .blur {
     display: inline-block;
     position: absolute;
@@ -177,19 +192,40 @@ i {
     -o-border-radius: 20px;
 }
 
-.blur:hover~.link__item {
-    opacity: 1;
+.link__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(224, 224, 224, 0.5);
+    position: absolute;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
-.card__photo:hover .blur {
-    cursor: pointer;
-    background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
-    border-radius: 20px;
+.link__item:hover  {
+    opacity: 1;
+    background: #E0E0E0;
+    cursor: url(../images/hand-point-up.png), auto;
     transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     -moz-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
+}
+
+.like {
+    left: 20px;
+}
+
+.download {
+    right: 20px;
 }
 
 .photo__item {
@@ -220,40 +256,4 @@ i {
     right: 20px;
     font-weight: 400;
     color: #E0E0E0;
-}
-
-.link__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    background: rgba(224, 224, 224, 0.5);
-    position: absolute;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.like {
-    left: 20px;
-}
-
-.download {
-    right: 20px;
-}
-
-.link__item:hover {
-    opacity: 1;
-    background: #E0E0E0;
-    cursor: url(../images/hand-point-up.png), auto;
-    transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    -moz-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
 }
